@@ -1,3 +1,6 @@
+-- Crear base de datos
+CREATE DATABASE pokedex;
+
 -- Tabla Pokemons
 CREATE TABLE pokemons (
     id INT AUTO_INCREMENT PRIMARY KEY,
