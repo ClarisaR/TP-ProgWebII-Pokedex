@@ -88,7 +88,8 @@
 
                 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $search = $_POST['search'];
-                    $sql = "SELECT * FROM pokemons WHERE nombre LIKE '%$search%' OR tipo_id LIKE '%$search%' OR numero_identificador LIKE '%$search%'";
+                    $sql = "SELECT * FROM pokemons WHERE nombre LIKE '%$search%' OR numero_identificador LIKE '%$search%' ";
+                    $sql .= "UNION SELECT * FROM pokemons WHERE tipo_id = (SELECT id FROM tipos WHERE nombre LIKE '%$search%')";
                     $result = $db->query($sql);
                 } else {
                     $sql = "SELECT * FROM pokemons ORDER BY numero_identificador";
