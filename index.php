@@ -126,11 +126,15 @@
                                 </td>
                             <?php } ?>
                         </tr>
-                <?php
+                    <?php
                     }
-                } else {
+                } elseif (isset($_POST['search'])) {
                     header('Location: index.php?error_not_found=true');
-                } ?>
+                } else { ?>
+                    <tr>
+                        <td colspan="5">No hay pokemones</td>
+                    </tr>
+                <?php } ?>
 
             </tbody>
         </table>
