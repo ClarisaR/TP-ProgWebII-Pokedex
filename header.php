@@ -25,7 +25,13 @@
             }
             echo '</form>';
         }else{
-            echo '<h3>' . $_SESSION['usuario'] . '</h3>';
+            echo '<div class="d-flex flex-column flex-md-row align-items-center">';
+            echo '<h3 class="m-3">' . $_SESSION['usuario'] . '</h3>';
+            echo '<form method="post" action="manejoDeSesion.php">';
+            echo '<input type="hidden" name="accion" value="cerrar_sesion">';
+            echo '<button class="btn btn-secondary" type="submit">Salir</button>';
+            echo '</form>';
+            echo '</div>';
         }
         ?>
     </div>

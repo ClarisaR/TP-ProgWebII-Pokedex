@@ -8,6 +8,13 @@
     //creo una sesion
     $sesion = new Sesion($conexion);
 
+    //verifico si en el post viene la 'accion' de cerrar sesion
+    if(isset($_POST['accion']) && $_POST['accion'] === 'cerrar_sesion'){
+        $sesion->cerrarSesion();
+        header('Location: index.php');
+        exit();
+    }
+
     //verifico que usuario y contrasenia fueron establecidas
     if (!isset($_POST['usuario']) || !isset($_POST['contrasenia'])){
         header('Location: index.php?error=Usuario o contraseña no proporcionada.');
@@ -24,3 +31,4 @@
         header('Location: index.php?error=Usuario o contraseña invalida');
     }
     exit();
+

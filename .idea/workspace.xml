@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34e1fe8b-cc60-4b39-b966-bafc9432f19f" name="Changes" comment="Primer commit">
+    <list default="true" id="34e1fe8b-cc60-4b39-b966-bafc9432f19f" name="Changes" comment="Genere lógica de inicio de sesion">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manejoDeSesion.php" beforeDir="false" afterPath="$PROJECT_DIR$/manejoDeSesion.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +26,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "ClarisaR"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ClarisaR/TP-ProgWebII-Pokedex.git",
+    "accountId": "260babb5-b203-4174-8c03-39b1aa6ffa77"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 1
@@ -65,7 +79,7 @@
       <updated>1725984102884</updated>
       <workItem from="1725984105647" duration="140000" />
       <workItem from="1725984267573" duration="117000" />
-      <workItem from="1725984398089" duration="15033000" />
+      <workItem from="1725984398089" duration="19334000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />
@@ -75,7 +89,31 @@
       <option name="project" value="LOCAL" />
       <updated>1725984536691</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Cree clase BaseDeDatos">
+      <option name="closed" value="true" />
+      <created>1726006610691</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1726006610691</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Separe el header en un archivo aparte">
+      <option name="closed" value="true" />
+      <created>1726006655084</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1726006655084</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Genere lógica de inicio de sesion">
+      <option name="closed" value="true" />
+      <created>1726006677403</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1726006677403</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -106,6 +144,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Primer commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Primer commit" />
+    <MESSAGE value="Cree clase BaseDeDatos" />
+    <MESSAGE value="Separe el header en un archivo aparte" />
+    <MESSAGE value="Genere lógica de inicio de sesion" />
+    <option name="LAST_COMMIT_MESSAGE" value="Genere lógica de inicio de sesion" />
   </component>
 </project>
