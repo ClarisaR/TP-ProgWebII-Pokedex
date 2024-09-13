@@ -4,9 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34e1fe8b-cc60-4b39-b966-bafc9432f19f" name="Changes" comment="Genere lógica de inicio de sesion">
+    <list default="true" id="34e1fe8b-cc60-4b39-b966-bafc9432f19f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/header.php" beforeDir="false" afterPath="$PROJECT_DIR$/header.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BaseDeDatos.php" beforeDir="false" afterPath="$PROJECT_DIR$/BaseDeDatos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sesion.php" beforeDir="false" afterPath="$PROJECT_DIR$/GestorSesion.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/manejoDeSesion.php" beforeDir="false" afterPath="$PROJECT_DIR$/manejoDeSesion.php" afterDir="false" />
     </list>
@@ -26,18 +28,18 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ClarisaR"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ClarisaR&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ClarisaR/TP-ProgWebII-Pokedex.git",
-    "accountId": "260babb5-b203-4174-8c03-39b1aa6ffa77"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ClarisaR/TP-ProgWebII-Pokedex.git&quot;,
+    &quot;accountId&quot;: &quot;260babb5-b203-4174-8c03-39b1aa6ffa77&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 1
@@ -48,19 +50,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "clarisa",
-    "last_opened_file_path": "C:/xampp/htdocs",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;clarisa&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/htdocs&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -79,7 +81,9 @@
       <updated>1725984102884</updated>
       <workItem from="1725984105647" duration="140000" />
       <workItem from="1725984267573" duration="117000" />
-      <workItem from="1725984398089" duration="19334000" />
+      <workItem from="1725984398089" duration="25351000" />
+      <workItem from="1726065414709" duration="17554000" />
+      <workItem from="1726156842094" duration="14416000" />
     </task>
     <task id="LOCAL-00001" summary="Primer commit">
       <option name="closed" value="true" />
@@ -113,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726006677403</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Agrego lógica para cerrar sesión">
+      <option name="closed" value="true" />
+      <created>1726029549617</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1726029549617</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -147,6 +159,7 @@
     <MESSAGE value="Cree clase BaseDeDatos" />
     <MESSAGE value="Separe el header en un archivo aparte" />
     <MESSAGE value="Genere lógica de inicio de sesion" />
-    <option name="LAST_COMMIT_MESSAGE" value="Genere lógica de inicio de sesion" />
+    <MESSAGE value="Agrego lógica para cerrar sesión" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agrego lógica para cerrar sesión" />
   </component>
 </project>

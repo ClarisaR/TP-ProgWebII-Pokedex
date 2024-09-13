@@ -1,12 +1,12 @@
 <?php
     require_once ('BaseDeDatos.php');
-    require_once ('Sesion.php');
+    require_once('GestorSesion.php');
 
     //obtengo una conexion a la base de datos
-    $conexion = new BaseDeDatos();
+    $baseDeDatos = BaseDeDatos::getBaseDeDatos();
 
     //creo una sesion
-    $sesion = new Sesion($conexion);
+    $sesion = new GestorSesion($baseDeDatos);
 
     //verifico si en el post viene la 'accion' de cerrar sesion
     if(isset($_POST['accion']) && $_POST['accion'] === 'cerrar_sesion'){
