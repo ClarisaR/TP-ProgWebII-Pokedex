@@ -34,4 +34,10 @@ class GestorDePokemones
         );
     }
 
+    public function obtenerPokemones()
+    {
+        $resultado = $this->baseDeDatos->ejecutarConsulta("SELECT * FROM pokemon");
+        return $resultado->fetch_all(MYSQLI_ASSOC);
+    }
+
 }
