@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="34e1fe8b-cc60-4b39-b966-bafc9432f19f" name="Changes" comment="Cambio de nombre archivo sesion">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GestorDePokemones.php" beforeDir="false" afterPath="$PROJECT_DIR$/GestorDePokemones.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Pokemon.php" beforeDir="false" afterPath="$PROJECT_DIR$/Pokemon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/crearPokemon.php" beforeDir="false" afterPath="$PROJECT_DIR$/crearPokemon.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/procesarPokemon.php" beforeDir="false" afterPath="$PROJECT_DIR$/procesarPokemon.php" afterDir="false" />
-    </list>
+    <list default="true" id="34e1fe8b-cc60-4b39-b966-bafc9432f19f" name="Changes" comment="Cambio de nombre archivo sesion" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,7 +46,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "reestructuraBD",
+    "git-widget-placeholder": "clarisa",
     "last_opened_file_path": "C:/xampp/htdocs",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
