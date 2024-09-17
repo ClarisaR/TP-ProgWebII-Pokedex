@@ -57,12 +57,12 @@
 
             <div class="form-group">
                 <label for="peso">Peso (kg)</label>
-                <input type="number" name="peso" id="peso" class="form-control" placeholder="Ingrese el peso en kilogramos">
+                <input type="number" step="0.01" name="peso" id="peso" class="form-control" placeholder="Ingrese el peso en kilogramos">
             </div>
 
             <div class="form-group">
                 <label for="altura">Altura (m)</label>
-                <input type="number" name="altura" id="altura" class="form-control" placeholder="Ingrese la altura en metros">
+                <input type="number" step="0.01" name="altura" id="altura" class="form-control" placeholder="Ingrese la altura en metros">
             </div>
             <button type="submit" class="btn btn-primary btn-block">Registrar Pokémon</button>
         </form>
