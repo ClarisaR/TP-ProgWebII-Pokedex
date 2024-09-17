@@ -36,22 +36,14 @@
             </div>
             <div class="form-group">
                 <label for="tipo">Tipo de Pokémon</label>
-                <select name="tipo[]" id="tipo" class="form-control" multiple required>
-                    <?php
-                        require_once('GestorDePokemones.php');
-                        //agrego dinamicamente los tipos de pokemones obteniendolos de la base de datos
-                        $gestor = GestorDePokemones::getGestorDePokemones();
-                        // codigo para traer todas las filas de tipo
-                        $tipos = $gestor->obtenerTiposDePokemones();
-                        var_dump($tipos);
-                        foreach ($tipos as $tipo) {
-                            echo '<option value="' . $tipo['id'] . '">' . $tipo['nombre'] . '</option>';
-                        };
-
-                    ?>
-
+                <select name="tipo" id="tipo" class="form-control" required>
+                    <option value="1">Fuego</option>
+                    <option value="2">Agua</option>
+                    <option value="3">Planta</option>
+                    <option value="4">Tierra</option>
                 </select>
             </div>
+
             <div class="form-group">
                 <label for="descripcion">Descripción</label>
                 <textarea name="descripcion" id="descripcion" rows="4" class="form-control" placeholder="Ingrese una descripción" required></textarea>

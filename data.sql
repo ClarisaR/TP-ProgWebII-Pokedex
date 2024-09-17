@@ -17,39 +17,20 @@ INSERT INTO Tipo (nombre) VALUES
                  ('Fuego'),
                  ('Agua'),
                  ('Planta'),
-                 ('Eléctrico'),
-                 ('Volador'),
-                 ('Hielo'),
-                 ('Lucha'),
-                 ('Fantasma'),
-                 ('Tierra'),
-                 ('Bicho'),
-                 ('Dragón'),
-                 ('Hada'),
-                 ('Normal'),
-                 ('Veneno'),
-                 ('Psíquico'),
-                 ('Roca'),
-                 ('Acero');
+                 ('Tierra');
 
 --tabla intermedia
-CREATE TABLE Pokemon_Tipo (
-      pokemon_id INT,
-      tipo_id INT,
-      PRIMARY KEY (pokemon_id, tipo_id),
-      FOREIGN KEY (pokemon_id) REFERENCES pokemon(id) ON DELETE CASCADE,
-      FOREIGN KEY (tipo_id) REFERENCES tipo(id) ON DELETE CASCADE
-);
-
 
 -- Tabla Pokemon
 CREATE TABLE Pokemon (
         id INT AUTO_INCREMENT PRIMARY KEY,
         numero_identificador INT NOT NULL UNIQUE,
+        id_tipo INT NOT NULL,
         imagen VARCHAR(255) NOT NULL ,
         nombre VARCHAR(100) NOT NULL,
         descripcion TEXT NOT NULL ,
         habilidades VARCHAR(100) NOT NULL,
         peso FLOAT NOT NULL,
-        altura FLOAT NOT NULL
+        altura FLOAT NOT NULL,
+        FOREIGN KEY (id_tipo) REFERENCES Tipo(id)
 );

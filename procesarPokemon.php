@@ -17,7 +17,7 @@ if (isset($_FILES["imagen"]) && $_FILES["imagen"]["error"] == 0 && $_FILES["imag
     move_uploaded_file($_FILES["imagen"]["tmp_name"], $rutaImagen);
 }
 $nombre = extraerParametroOValorPorDefecto('nombre', "Sin datos cargados");
-$tipos = extraerParametroOValorPorDefecto('tipo', "Sin datos cargados");
+$tipo = extraerParametroOValorPorDefecto('tipo', "Sin datos cargados");
 $descripcion = extraerParametroOValorPorDefecto('descripcion', "Sin datos cargados");
 $habilidades = extraerParametroOValorPorDefecto('habilidades', "Sin datos cargados");
 $peso = (float)extraerParametroOValorPorDefecto('peso', "Sin datos cargados");
@@ -25,7 +25,7 @@ $altura = (float)extraerParametroOValorPorDefecto('altura', "Sin datos cargados"
 
 
 $gestorDePokemones = GestorDePokemones::getGestorDePokemones();
-$pokemon = new Pokemon($numeroIdentificador, $rutaImagen, $tipos, $nombre, $descripcion, $habilidades, $peso, $altura);
+$pokemon = new Pokemon($numeroIdentificador, $rutaImagen, $tipo, $nombre, $descripcion, $habilidades, $peso, $altura);
 $gestorDePokemones->agregarPokemon($pokemon);
 
 

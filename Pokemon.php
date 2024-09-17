@@ -5,18 +5,18 @@ class Pokemon
     private $id;
     private $numeroIdentificador;
     private $rutaImagen;
-    private $tipos;
+    private $tipo;
     private $nombre;
     private $descripcion;
     private $habilidades;
     private $peso;
     private $altura;
 
-    public function __construct($numeroIdentificador, $rutaImagen, $tipos, $nombre, $descripcion, $habilidades, $peso, $altura)
+    public function __construct($numeroIdentificador, $rutaImagen, $tipo, $nombre, $descripcion, $habilidades, $peso, $altura)
     {
         $this->numeroIdentificador =$numeroIdentificador;
         $this->rutaImagen = $rutaImagen;
-        $this->tipos = $tipos;
+        $this->tipo = $tipo;
         $this->nombre = $nombre;
         $this->descripcion = $descripcion;
         $this->habilidades = $habilidades;
@@ -55,9 +55,9 @@ class Pokemon
     /**
      * @return mixed
      */
-    public function getTipos()
+    public function getTipo()
     {
-        return $this->tipos;
+        return $this->tipo;
     }
 
     /**
