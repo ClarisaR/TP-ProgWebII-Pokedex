@@ -52,17 +52,17 @@
             <!-- Datos Extras -->
             <div class="form-group">
                 <label for="habilidades">Habilidades</label>
-                <input type="text" name="habilidades" id="habilidades" class="form-control" placeholder="Ingrese las habilidades">
+                <input type="text" name="habilidades" id="habilidades" class="form-control" placeholder="Ingrese las habilidades" required>
             </div>
 
             <div class="form-group">
                 <label for="peso">Peso (kg)</label>
-                <input type="number" step="0.01" name="peso" id="peso" class="form-control" placeholder="Ingrese el peso en kilogramos">
+                <input type="number" step="0.01" name="peso" id="peso" class="form-control" placeholder="Ingrese el peso en kilogramos" required>
             </div>
 
             <div class="form-group">
                 <label for="altura">Altura (m)</label>
-                <input type="number" step="0.01" name="altura" id="altura" class="form-control" placeholder="Ingrese la altura en metros">
+                <input type="number" step="0.01" name="altura" id="altura" class="form-control" placeholder="Ingrese la altura en metros" required>
             </div>
             <button type="submit" class="btn btn-primary btn-block">Registrar Pokémon</button>
         </form>

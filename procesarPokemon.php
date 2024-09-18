@@ -8,15 +8,14 @@ function extraerParametroOValorPorDefecto($parametro, $valorPorDefecto)
 }
 
 $numeroIdentificador = (int)extraerParametroOValorPorDefecto('numero', null);
-$rutaImagen = '';
-$rutaCarpeta = "img/pokemons";
+$imagen = '';
 if (isset($_FILES["imagen"]) && $_FILES["imagen"]["error"] == 0 && $_FILES["imagen"]["size"] > 0 )
 {
-    $rutaImagen = $rutaCarpeta . "/" . random_int(0,10000) . $_FILES["imagen"]["name"];
+    $imagen = $_FILES["imagen"]["name"];
     //guardar la imagen en la carpeta  img/pokemons.
-    move_uploaded_file($_FILES["imagen"]["tmp_name"], $rutaImagen);
+    move_uploaded_file($_FILES["imagen"]["tmp_name"], 'img/pokemons/' .$imagen);
 }else{
-    $rutaImagen = null;
+    $imagen = null;
 }
 $nombre = extraerParametroOValorPorDefecto('nombre', null);
 $tipo = extraerParametroOValorPorDefecto('tipo', null);
@@ -26,7 +25,7 @@ $peso = (float)extraerParametroOValorPorDefecto('peso', null);
 $altura = (float)extraerParametroOValorPorDefecto('altura', null);
 
 if($numeroIdentificador === null ||
-    $rutaImagen === null ||
+    $imagen === null ||
     $nombre === null ||
     $tipo === null ||
     $descripcion === null ||
@@ -34,18 +33,16 @@ if($numeroIdentificador === null ||
     $peso === null ||
     $altura === null )
 {
-    header('Location: ../index.php');
+    header('Location: index.php');
     exit();
 }
 
-
-
-
 $gestorDePokemones = GestorDePokemones::getGestorDePokemones();
-$pokemon = new Pokemon($numeroIdentificador, $rutaImagen, $tipo, $nombre, $descripcion, $habilidades, $peso, $altura);
+$pokemon = new Pokemon($numeroIdentificador, $imagen, $tipo, $nombre, $descripcion, $habilidades, $peso, $altura);
 $gestorDePokemones->agregarPokemon($pokemon);
 
-
+header('Location: index.php');
+exit();
 
 
 

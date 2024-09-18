@@ -41,7 +41,8 @@
                 $stmt->close();
                 return $resultado;
             }
+            $filasAfectadas = $stmt->affected_rows;
             $stmt->close();
-            return true;
+            return $filasAfectadas > 0;
         }
     }
