@@ -48,7 +48,7 @@ class GestorDePokemones
             $consultaPreparada = "SELECT * FROM pokemon WHERE id = ?";
             $resultado = $this->baseDeDatos->ejecutarConsultaPreparada($consultaPreparada, 'i', $consulta);
         } else {
-            $consultaPreparada = "SELECT * FROM pokemon P JOIN tipo T ON P.id_tipo = T.id WHERE P.nombre LIKE ? OR T.nombre LIKE ?";
+            $consultaPreparada = "SELECT P.*  FROM pokemon P JOIN tipo T ON P.id_tipo = T.id WHERE P.nombre LIKE ? OR T.nombre LIKE ?";
             $consultaAmplia = '%' . $consulta . '%';
             $resultado = $this->baseDeDatos->ejecutarConsultaPreparada($consultaPreparada, 'ss', $consultaAmplia, $consultaAmplia);
         }

@@ -57,7 +57,7 @@
                     if ($consulta === '') {
                         $pokemones = $gestorDePokemones->obtenerPokemones();
                     } elseif (empty($pokemones)) {
-                        echo "<p>Pokémon no encontrado</p>";
+                        echo "<p class='text-center h5 mb-4'>Pokémon no encontrado</p>";
                         $pokemones = $gestorDePokemones->obtenerPokemones();
                     }
 
