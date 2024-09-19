@@ -1,4 +1,4 @@
-<header>
+<header class="mt-2">
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
         <img src="images/logo-pokedex.png" alt="logo" style="width: 50px; height: 50px">
         <h1 class="my-2 my-md-0">Pokedex</h1>
