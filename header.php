@@ -1,6 +1,8 @@
 <header>
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-        <img src="img/logo-pokedex.png" alt="logo" style="width: 50px; height: 50px">
+        <a href="index.php">
+            <img src="img/logo-pokedex.png" alt="logo" style="width: 50px; height: 50px">
+        </a>
         <h1 class="my-2 my-md-0">Pokedex</h1>
         <?php
         session_start();

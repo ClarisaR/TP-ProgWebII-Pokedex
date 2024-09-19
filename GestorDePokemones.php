@@ -74,4 +74,16 @@ class GestorDePokemones
         }
     }
 
+    public function buscarPokemon($busqueda)
+    {
+        $consulta = "SELECT * FROM pokemon WHERE nombre LIKE '%$busqueda%' OR descripcion LIKE '%$busqueda%' OR numero_identificador LIKE '%$busqueda%'";
+        $resultado = $this->baseDeDatos->ejecutarConsulta($consulta);
+        return $resultado->fetch_all(MYSQLI_ASSOC);
+    }
+
+    public function obtenerTipos()
+    {
+        $resultado = $this->baseDeDatos->ejecutarConsulta("SELECT * FROM tipo");
+        return $resultado->fetch_all(MYSQLI_ASSOC);
+    }
 }
