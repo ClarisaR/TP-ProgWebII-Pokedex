@@ -7,11 +7,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-<div class="container-fluid mt-4">
-    <?php
-    include_once('components/header.php');
-    ?>
-    <main>
+<div class="container-fluid d-flex flex-column min-vh-100">
+    <?php include_once('components/header.php'); ?>
+    <main class="flex-grow-1">
         <form method="get" action="">
             <div class="form-row mt-5">
                 <div class="col-12 col-md-9 mb-2 mb-md-0">
@@ -90,9 +88,7 @@
         }
         ?>
     </main>
+    <?php include_once('components/footer.php'); ?>
 </div>
-<?php
-include_once('components/footer.php');
-?>
 </body>
 </html>
