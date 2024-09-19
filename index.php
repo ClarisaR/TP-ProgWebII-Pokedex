@@ -49,7 +49,18 @@
                     <?php
                     require_once('classes/GestorDePokemones.php');
                     $gestorDePokemones = GestorDePokemones::getGestorDePokemones();
-                    $pokemones = $gestorDePokemones->obtenerPokemones();
+
+                    $consulta = isset($_GET['consulta']) ? trim($_GET['consulta']) : '';
+
+                    $pokemones = $gestorDePokemones->buscarPokemones($consulta);
+
+                    if ($consulta === '') {
+                        $pokemones = $gestorDePokemones->obtenerPokemones();
+                    } elseif (empty($pokemones)) {
+                        echo "<p>Pokémon no encontrado</p>";
+                        $pokemones = $gestorDePokemones->obtenerPokemones();
+                    }
+
                     foreach ($pokemones as $pokemon) {
                         echo '<tr>';
                         echo '<td><img src="images/pokemons/' . $pokemon['imagen'] . '" alt="imagen" class="img-fluid" style="max-width: 80px;"></td>';

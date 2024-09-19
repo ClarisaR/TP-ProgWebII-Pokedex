@@ -1,6 +1,6 @@
 <?php
 
-require_once ('BaseDeDatos.php');
+require_once('BaseDeDatos.php');
 
 class GestorDePokemones
 {
@@ -14,11 +14,12 @@ class GestorDePokemones
 
     public static function getGestorDePokemones()
     {
-        if(self::$gestorDePokemones == null) {
+        if (self::$gestorDePokemones == null) {
             self::$gestorDePokemones = new GestorDePokemones(BaseDeDatos::getBaseDeDatos());
         }
         return self::$gestorDePokemones;
     }
+
     public function agregarPokemon($pokemon)
     {
         $consulta = "INSERT INTO pokemon (numero_identificador, imagen, id_tipo,  nombre, descripcion, habilidades, peso, altura) VALUES(?,?,?,?,?,?,?,?)";
@@ -40,10 +41,26 @@ class GestorDePokemones
         return $resultado->fetch_all(MYSQLI_ASSOC);
     }
 
-    public function  darDeBajaPokemon($id)
+    public function buscarPokemones($consulta)
+    {
+
+        if (is_numeric($consulta)) {
+            $consultaPreparada = "SELECT * FROM pokemon WHERE id = ?";
+            $resultado = $this->baseDeDatos->ejecutarConsultaPreparada($consultaPreparada, 'i', $consulta);
+        } else {
+            $consultaPreparada = "SELECT * FROM pokemon P JOIN tipo T ON P.id_tipo = T.id WHERE P.nombre LIKE ? OR T.nombre LIKE ?";
+            $consultaAmplia = '%' . $consulta . '%';
+            $resultado = $this->baseDeDatos->ejecutarConsultaPreparada($consultaPreparada, 'ss', $consultaAmplia, $consultaAmplia);
+        }
+
+        return $resultado ? $resultado->fetch_all(MYSQLI_ASSOC) : [];
+
+    }
+
+    public function darDeBajaPokemon($id)
     {
         $resultado = $this->obtenerPokemon($id);
-        if($resultado != null){
+        if ($resultado != null) {
             $consultaPreparada = "DELETE FROM pokemon WHERE id = ?";
             $this->baseDeDatos->ejecutarConsultaPreparada($consultaPreparada, 'i', $id);
         }
@@ -59,7 +76,7 @@ class GestorDePokemones
     public function modificarPokemon($pokemon)
     {
         $resultado = $this->obtenerPokemon($pokemon->getId());
-        if($resultado != null){
+        if ($resultado != null) {
             $consultaPreparada = "UPDATE pokemon SET numero_identificador = ?, imagen = ?, id_tipo = ? ,  nombre = ?, descripcion = ?, habilidades = ?, peso = ?, altura = ? WHERE id = ?";
             $this->baseDeDatos->ejecutarConsultaPreparada($consultaPreparada, 'isisssddi',
                 $pokemon->getNumeroIdentificador(),
