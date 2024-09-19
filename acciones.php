@@ -1,6 +1,6 @@
 <?php
-    require_once ('GestorDePokemones.php');
-    require_once ('Pokemon.php');
+    require_once ('classes/GestorDePokemones.php');
+    require_once ('classes/Pokemon.php');
     session_start();
     if(!isset($_SESSION['logueado'])){
         header('Location: index.php');
@@ -40,8 +40,8 @@
         if(isset($_FILES["imagen"]) && $_FILES["imagen"]["error"] == 0 && $_FILES["imagen"]["size"] > 0)
         {
             $imagenMod = $_FILES["imagen"]["name"];
-            //guardar la imagen en la carpeta  img/pokemons.
-            move_uploaded_file($_FILES["imagen"]["tmp_name"], 'img/pokemons/'.$imagenMod);
+            //guardar la imagen en la carpeta  images/pokemons.
+            move_uploaded_file($_FILES["imagen"]["tmp_name"], 'images/pokemons/'.$imagenMod);
         }else{
             $imagenMod =  $imagenActual;
         }
@@ -79,7 +79,7 @@
             <div class="form-group">
                 <label for="imagen">Imagen del Pokémon</label>
                 <div>Imagen Actual: </div>
-                <img src="img/pokemons/<?php echo $imagenActual ?>" alt="imagen" style="max-width: 100px;"">
+                <img src="images/pokemons/<?php echo $imagenActual ?>" alt="imagen" style="max-width: 100px;"">
                 <input type="file" name="imagen" id="imagen" class="form-control-file">
             </div>
             <div class="form-group">
@@ -122,7 +122,7 @@
         </div>
     </div>
     <?php
-    include_once ('footer.php');
+    include_once('footer.php');
     ?>
 </body>
 </html>

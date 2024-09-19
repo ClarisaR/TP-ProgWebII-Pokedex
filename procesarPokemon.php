@@ -1,6 +1,6 @@
 <?php
-require_once ('GestorDePokemones.php');
-require_once ('Pokemon.php');
+require_once ('classes/GestorDePokemones.php');
+require_once ('classes/Pokemon.php');
 
 function extraerParametroOValorPorDefecto($parametro, $valorPorDefecto)
 {
@@ -12,8 +12,8 @@ $imagen = '';
 if (isset($_FILES["imagen"]) && $_FILES["imagen"]["error"] == 0 && $_FILES["imagen"]["size"] > 0 )
 {
     $imagen = $_FILES["imagen"]["name"];
-    //guardar la imagen en la carpeta  img/pokemons.
-    move_uploaded_file($_FILES["imagen"]["tmp_name"], 'img/pokemons/' .$imagen);
+    //guardar la imagen en la carpeta  images/pokemons.
+    move_uploaded_file($_FILES["imagen"]["tmp_name"], 'images/pokemons/' .$imagen);
 }else{
     $imagen = null;
 }

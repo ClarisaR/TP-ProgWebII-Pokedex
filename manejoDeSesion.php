@@ -1,6 +1,6 @@
 <?php
-    require_once ('BaseDeDatos.php');
-    require_once('GestorSesion.php');
+    require_once ('classes/BaseDeDatos.php');
+    require_once('classes/GestorSesion.php');
 
     //obtengo una conexion a la base de datos
     $baseDeDatos = BaseDeDatos::getBaseDeDatos();

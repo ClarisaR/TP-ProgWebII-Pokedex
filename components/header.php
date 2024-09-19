@@ -1,11 +1,11 @@
 <header>
     <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
-        <img src="img/logo-pokedex.png" alt="logo" style="width: 50px; height: 50px">
+        <img src="images/logo-pokedex.png" alt="logo" style="width: 50px; height: 50px">
         <h1 class="my-2 my-md-0">Pokedex</h1>
         <?php
         session_start();
         if(!isset($_SESSION['logueado'])){
-            echo '<form  method="post" action="manejoDeSesion.php">';
+            echo '<form  method="post" action="../manejoDeSesion.php">';
             echo '<div class="d-flex flex-column flex-md-row align-items-center">';
             echo '<div class="mb-2 mb-md-0 mr-md-2">';
             echo  '<label for="usuario" class="sr-only">Usuario</label>';
@@ -27,7 +27,7 @@
         }else{
             echo '<div class="d-flex flex-column flex-md-row align-items-center">';
             echo '<h3 class="m-3">' . $_SESSION['usuario'] . '</h3>';
-            echo '<form method="post" action="manejoDeSesion.php">';
+            echo '<form method="post" action="../manejoDeSesion.php">';
             echo '<input type="hidden" name="accion" value="cerrar_sesion">';
             echo '<button class="btn btn-secondary" type="submit">Salir</button>';
             echo '</form>';
