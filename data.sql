@@ -7,6 +7,9 @@ CREATE TABLE Usuario (
     contrasenia VARCHAR(255) NOT NULL
 );
 
+INSERT INTO Usuario (usuario, contrasenia)
+VALUES ('admin', 'admin123');
+
 -- Tabla Tipo
 CREATE TABLE Tipo (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -18,8 +21,6 @@ INSERT INTO Tipo (nombre) VALUES
                  ('Agua'),
                  ('Planta'),
                  ('Tierra');
-
---tabla intermedia
 
 -- Tabla Pokemon
 CREATE TABLE Pokemon (
